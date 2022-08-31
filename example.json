@@ -1,0 +1,11 @@
+{
+    "project_name": "oakx-ensmallen",
+    "__project_slug": "{{ cookiecutter.project_name|lower()|replace(' ', '_')|replace('-', '_') }}",
+    "scheme": "ensmallen",
+    "implementation": "EnsmallenImplementation",
+    "implementation_name": "ensmallen_implementation",
+    "project_description": "OAK plugin for ensmallen.",
+    "author": "Chris Mungall <cjmungall@lbl.gov>",
+    "github_token_for_doc_deployment": "GH_TOKEN",
+    "github_token_for_pypi_deployment": "PYPI_TOKEN"
+}
