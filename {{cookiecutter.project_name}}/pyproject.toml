@@ -7,7 +7,7 @@ license = "BSD 3"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 setuptools = "^64.0.1"
 tox = "^3.25.1"
 click = "^8.1.3"
@@ -22,7 +22,10 @@ sphinx-autodoc-typehints = "^1.19.2"
 sphinx-click = "^4.3.0"
 
 [tool.poetry.scripts]
-{{cookiecutter.project_name}} = "{{cookiecutter.project_name}}.cli:main"
+{{cookiecutter.project_name}} = "{{cookiecutter.__project_slug}}.cli:main"
+
+[tool.poetry.plugins."oaklib.plugins"]
+{{cookiecutter.scheme}} = "{{cookiecutter.__project_slug}}.{{cookiecutter.implementation_name}}:{{cookiecutter.implementation}}"
 
 [tool.poetry.extras]
 docs = [
