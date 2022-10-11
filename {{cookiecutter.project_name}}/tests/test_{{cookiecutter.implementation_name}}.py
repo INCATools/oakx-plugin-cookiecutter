@@ -3,7 +3,7 @@ from tests import TEST_OWL
 import unittest
 
 from oaklib.selector import get_resource_from_shorthand
-from oaklib.implementations import implementation_resolver
+from oaklib.implementations import get_implementation_resolver
 from {{cookiecutter.__project_slug}}.{{cookiecutter.implementation_name}} import {{cookiecutter.implementation}}
 
 class Test{{cookiecutter.implementation}}(unittest.TestCase):
@@ -11,6 +11,7 @@ class Test{{cookiecutter.implementation}}(unittest.TestCase):
         
     def test_plugin(self):
         """tests plugins are discovered"""
+        implementation_resolver = get_implementation_resolver()
         resolved = implementation_resolver.lookup("FOO")
         self.assertEqual(resolved, {{cookiecutter.implementation}})
 
